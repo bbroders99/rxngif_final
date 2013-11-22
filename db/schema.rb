@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131122162333) do
+ActiveRecord::Schema.define(version: 20131122171211) do
 
   create_table "pictures", force: true do |t|
-    t.string   "image_url",  default: "http://upload.wikimedia.org/wikipedia/commons/9/92/Image_of_nothing.svg"
+    t.string   "image",      default: "http://upload.wikimedia.org/wikipedia/commons/9/92/Image_of_nothing.svg"
     t.string   "caption"
     t.integer  "user_id"
     t.datetime "created_at"
