@@ -1,6 +1,6 @@
 class PicturesController < ApplicationController
   before_action :set_picture, :only => [:show, :edit, :update, :destroy]
-  before_action :user_must_be_owner_of_picture, :only => [:edit, :udpate, :destroy]
+  before_action :user_must_be_owner_of_picture, :only => [:show, :edit, :udpate, :destroy]
 
   def set_picture
     @picture = Picture.find(params[:id])
