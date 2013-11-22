@@ -28,7 +28,7 @@ class UsersController < ApplicationController
     @user.last_name = params[:last_name]
 
     if @user.save
-      redirect_to users_url, notice: "User created successfully."
+      redirect_to root_url, notice: "User created successfully."
     else
       render 'new'
     end
@@ -42,7 +42,7 @@ class UsersController < ApplicationController
     @user.last_name = params[:last_name]
 
     if @user.save
-      redirect_to users_url, notice: "User updated successfully."
+      redirect_to root_url, notice: "User updated successfully."
     else
       render 'edit'
     end
@@ -51,6 +51,6 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
 
-    redirect_to users_url, notice: "User deleted."
+    redirect_to root_url, notice: "User deleted."
   end
 end
