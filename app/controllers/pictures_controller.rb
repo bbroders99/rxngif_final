@@ -24,7 +24,7 @@ class PicturesController < ApplicationController
 
   def create
     @picture = Picture.new
-    @picture.image_url = params[:image_url]
+    @picture.image = params[:image]
     @picture.caption = params[:caption]
     @picture.user_id = current_user.id
 
@@ -39,7 +39,7 @@ class PicturesController < ApplicationController
   end
 
   def update
-    @picture.image_url = params[:image_url]
+    @picture.image = params[:image]
     @picture.caption = params[:caption]
     @picture.user_id = current_user.id
 
