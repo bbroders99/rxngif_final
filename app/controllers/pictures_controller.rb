@@ -13,7 +13,7 @@ class PicturesController < ApplicationController
   end
 
   def index
-    @pictures = Picture.page(params[:page]).per(10)
+    @pictures = current_user.pictures.page(params[:page]).per(10)
   end
 
   def show
